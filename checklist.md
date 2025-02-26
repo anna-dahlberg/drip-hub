@@ -7,3 +7,4 @@
 - Delete
 - Filtrera lista med produkter
 - Logga in?
+- Super-admin ska kunna skapa nya collegor/användare
