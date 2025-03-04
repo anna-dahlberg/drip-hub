@@ -2,9 +2,18 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Material extends Model
 {
-    //
+    use HasFactory;
+
+    protected $table = 'material';
+    public $timestamps = false;
+
+    public function products()
+    {
+        return $this->hasMany(Product::class, 'material_id');
+    }
 }
