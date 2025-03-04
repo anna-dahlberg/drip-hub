@@ -9,6 +9,7 @@ class Product extends Model
 {
     use HasFactory;
     protected $table = 'product';
+    protected $fillable = ['article_number', 'type_id', 'material_id', 'model_id', 'size', 'price', 'stock'];
     public $timestamps = false;
 
     public function ringType()
