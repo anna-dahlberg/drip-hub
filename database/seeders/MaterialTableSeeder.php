@@ -13,9 +13,6 @@ class MaterialTableSeeder extends Seeder
      */
     public function run(): void
     {
-        // Clear existing entries
-        Material::truncate();
-
         // Seed the metals
         $metals = ['gold', 'silver', 'rose gold'];
 
