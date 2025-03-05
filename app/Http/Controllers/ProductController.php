@@ -51,7 +51,11 @@ class ProductController extends Controller
 
     public function edit(Product $product)
     {
-        return view('products.edit', compact('product'));
+        $types = RingType::all();
+        $materials = Material::all();
+        $models = ModelRing::all();
+
+        return view('products.edit', compact('product', 'types', 'materials', 'models'));
     }
 
     public function update(Request $request, string $id)
