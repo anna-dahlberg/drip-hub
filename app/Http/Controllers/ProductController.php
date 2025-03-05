@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\RingType;
 use App\Models\Material;
 use App\Models\ModelRing;
+use App\Http\Requests\SaveProductRequest;
 
 class ProductController extends Controller
 {
@@ -26,19 +27,9 @@ class ProductController extends Controller
         return view('products.create', compact('types', 'materials', 'models'));
     }
 
-    public function store(Request $request)
+    public function store(SaveProductRequest $request)
     {
-        $validated = $request->validate([
-            'article_number' => 'required|integer|unique:product,article_number',
-            'type_id' => 'required|exists:ring_type,id',
-            'material_id' => 'required|exists:material,id',
-            'model_id' => 'required|exists:models,id',
-            'size' => 'required|integer',
-            'price' => 'required|integer',
-            'stock' => 'nullable|integer'
-        ]);
-
-        Product::create($validated);
+        Product::create($request->validated());
 
         return redirect()->route('products.index')
             ->with('success', 'Product created successfully.');
@@ -58,9 +49,11 @@ class ProductController extends Controller
         return view('products.edit', compact('product', 'types', 'materials', 'models'));
     }
 
-    public function update(Request $request, string $id)
+    public function update(SaveProductRequest $request, Product $product)
     {
-        //
+        $product->update($request->validated());
+
+        return redirect()->route('products.show', $product);
     }
 
     public function destroy(string $id)

@@ -3,7 +3,8 @@
 
     <x-errors />
 
-    <form method="POST" action="">
+    <form method="POST" action="{{ route('products.update', $product) }}">
+        @method('PATCH');
        
         <x-products.form 
             :types="$types" 
