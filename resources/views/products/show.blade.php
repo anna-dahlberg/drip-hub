@@ -22,4 +22,6 @@
     <p class="product-title">In stock</p>
     <p>{{ $product->stock }}</p>
 
+    <a href="{{ route('products.edit', $product->id) }}">Edit product</a>
+
 </x-layout>
