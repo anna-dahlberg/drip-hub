@@ -3,7 +3,7 @@
 
     <x-errors />
 
-    <form method="POST" action="{{ route('products.store') }}">
+    <form method="POST" action="">
        
         <x-products.form 
             :types="$types" 
