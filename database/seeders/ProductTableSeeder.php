@@ -23,5 +23,14 @@ class ProductTableSeeder extends Seeder
             'price' => 9600,
             'stock' => 100,
         ]);
+        Product::factory()->create([
+            'article_number' => 87654321,
+            'type_id' => 2,
+            'material_id' => 2,
+            'model_id' => 2,
+            'size' => 17,
+            'price' => 7600,
+            'stock' => 90,
+        ]);
     }
 }
