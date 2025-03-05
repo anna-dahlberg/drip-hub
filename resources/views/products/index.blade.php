@@ -3,7 +3,7 @@
 
     @foreach ($products as $product)
 
-        <h4>{{ $product->modelRing->name }}</h4>
+        <a href="{{ route('products.show', $product->id) }}"><h4>{{ $product->modelRing->name }}</h4></a>
         {{-- Image here --}}
         <p>{{ $product->article_number }}</p>
         
