@@ -18,9 +18,8 @@
             <option value="<?= $i; ?>"><?= $i; ?></option>
         <?php endfor; ?>
     </select>
-
     <p class="product-title">In stock</p>
-    <p>{{ $product->stock }}</p>
+    <p id="stock-display">{{ $product->stock }}</p>
 
     <a href="{{ route('products.edit', $product->article_number) }}">Edit product</a>
 
@@ -31,4 +30,17 @@
         <button>Delete product</button>
     </form>
 
+    <script>
+        document.getElementById('product-size').addEventListener('change', function() {
+            const size = this.value;
+            const articleNumber = '{{ $product->article_number }}';
+
+            fetch(`/products/${articleNumber}/stock/${size}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('stock-display').textContent = data.stock;
+                })
+                .catch(error => console.error('Error fetching stock information:', error));
+        });
+    </script>
 </x-layout>
