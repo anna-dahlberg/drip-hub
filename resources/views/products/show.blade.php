@@ -24,4 +24,11 @@
 
     <a href="{{ route('products.edit', $product->id) }}">Edit product</a>
 
+    <form method="post" action="{{ route('products.destroy', $product) }}">
+        @csrf
+        @method('DELETE')
+
+        <button>Delete product</button>
+    </form>
+
 </x-layout>
