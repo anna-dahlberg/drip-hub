@@ -10,3 +10,32 @@
     border: outset rgba(0, 0, 0, 0.1);
     border-width: 0 4px 0 0;
 }
+
+.admin-nav small {
+    align-self: start;
+    margin: 0.3rem;
+    font-weight: 500;
+}
+
+.admin-nav h1 {
+    margin-top: 2rem;
+}
+
+.options {
+    height: 40%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.nav-link {
+    margin-bottom: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}

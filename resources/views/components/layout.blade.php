@@ -11,6 +11,12 @@
 <body>
     <main class="content">
         <nav class="admin-nav">
+            <small>Drip Hub</small>
+            <h1>Welcome!</h1>
+            <section class="options">
+                <a href="{{ route('home') }}" class="nav-link">Home</a>
+                <a href="{{ route('products.create') }}" class="nav-link">Add Product</a>
+            </section>
         </nav>
         <section>
             {{ $slot }}
