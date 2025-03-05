@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> --}}
-    @vite(['resources/css/nav.css', 'resources/css/global.css'])
+    @vite(['resources/css/nav.css', 'resources/css/global.css', 'resources/css/dashboard.css', 'resources/css/product.css'])
     <title>Drip Hub</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
                 <a href="{{ route('products.create') }}" class="nav-link">Add Product</a>
             </section>
         </nav>
-        <section>
+        <section class="dashboard">
             {{ $slot }}
         </section>
     </main>

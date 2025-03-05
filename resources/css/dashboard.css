@@ -1,0 +1,11 @@
+.dashboard {
+    height: 90vh;
+    width: 90vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    overflow: scroll;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}

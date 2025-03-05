@@ -1,0 +1,32 @@
+.products {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: lightgrey;
+    width: 30%;
+    height: 60%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: outset rgba(0, 0, 0, 0.1);
+    border-width: 0 4px 4px 0;
+    text-decoration: none;
+    color: black;
+}
+
+.product-img {
+    background-color: white;
+    /* remove bg-color later! */
+    height: 80%;
+    width: 90%;
+}
