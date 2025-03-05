@@ -14,7 +14,7 @@ class RingTypeTableSeeder extends Seeder
     public function run(): void
     {
         // Clear existing entries
-        RingType::truncate();
+        RingType::query()->delete();
 
         // Seed the metals
         $types = ['band ring', 'solitaire ring', 'halo ring', 'three-stone ring', 'eternity ring', 'signet ring'];

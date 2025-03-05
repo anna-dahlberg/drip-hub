@@ -13,14 +13,14 @@ class ModelsTableSeeder extends Seeder
      */
     public function run(): void
     {
-        ModelRing::truncate();
+        ModelRing::query()->delete();
 
         // Seed the metals
         $names = ['Amelia', 'Maria', 'Jasmine', 'Jean', 'Charles', 'Alexander'];
 
         foreach ($names as $name) {
             ModelRing::factory()->create([
-                'type' => $name,
+                'name' => $name,
             ]);
         }
     }

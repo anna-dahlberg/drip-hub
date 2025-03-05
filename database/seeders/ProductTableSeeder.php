@@ -13,7 +13,7 @@ class ProductTableSeeder extends Seeder
      */
     public function run(): void
     {
-        Product::truncate();
+        Product::query()->delete();
         Product::factory()->create([
             'article_number' => 12345678,
             'type_id' => 1,
