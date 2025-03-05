@@ -23,6 +23,9 @@ Route::get('/products/{product}', [ProductController::class, 'show'])
 Route::get('/products/{product}/edit', [ProductController::class, 'edit'])
     ->name('products.edit');
 
+Route::patch('/products/{product}', [ProductController::class, 'update'])
+    ->name('products.update');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
