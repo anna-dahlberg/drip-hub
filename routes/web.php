@@ -20,6 +20,9 @@ Route::post('/products/store', [ProductController::class, 'store'])
 Route::get('/products/{product}', [ProductController::class, 'show'])
     ->name('products.show');
 
+Route::get('/products/{product}/edit', [ProductController::class, 'edit'])
+    ->name('products.edit');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

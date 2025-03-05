@@ -9,5 +9,7 @@
     <p>{{ $product->ringType }}</p>
 
     <p>{{ $product->price }}</p>
+
+    <a href="{{ route('products.edit', $product->id) }}">Edit product</a>
     
 </x-layout>
