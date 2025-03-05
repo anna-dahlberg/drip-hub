@@ -9,6 +9,4 @@
         
     @endforeach
 
-    <a href="{{ route('products.create') }}">Create new Product</a>
-
 </x-layout>
