@@ -29,10 +29,9 @@ class ProductController extends Controller
 
     public function store(SaveProductRequest $request)
     {
-        Product::create($request->validated());
+        $product = Product::create($request->validated());
 
-        return redirect()->route('products.index')
-            ->with('success', 'Product created successfully.');
+        return redirect()->route('products.show', $product);
     }
 
     public function show(Product $product)
@@ -56,8 +55,10 @@ class ProductController extends Controller
         return redirect()->route('products.show', $product);
     }
 
-    public function destroy(string $id)
+    public function destroy(Product $product)
     {
-        //
+        $product->delete();
+
+        return redirect()->route('products.index');
     }
 }

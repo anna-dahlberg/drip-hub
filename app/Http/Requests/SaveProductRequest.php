@@ -21,7 +21,7 @@ class SaveProductRequest extends FormRequest
      */
     public function rules(): array
     {
-        $productId = $this->route('product')->id;
+        $productId = $this->route('product') ? $this->route('product')->id : null;
 
         return [
             'article_number' => 'required|integer|unique:product,article_number,' . $productId,
