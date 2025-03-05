@@ -1,11 +1,11 @@
 @csrf
 
-<div>
+<div class="input-container">
     <label for="article_number">Article Number</label>
     <input type="number" name="article_number" id="article_number" value="{{ old('article_number') }}" required>
 </div>
 
-<div>
+<div class="input-container">
     <label for="type_id">Ring Type</label>
     <select name="type_id" id="type_id" required>
         <option value="">Select Ring Type</option>
@@ -15,7 +15,7 @@
     </select>
 </div>
 
-<div>
+<div class="input-container">
     <label for="material_id">Material</label>
     <select name="material_id" id="material_id" required>
         <option value="">Select Material</option>
@@ -25,7 +25,7 @@
     </select>
 </div>
 
-<div>
+<div class="input-container">
     <label for="model_id">Model</label>
     <select name="model_id" id="model_id" required>
         <option value="">Select Model</option>
@@ -35,17 +35,17 @@
     </select>
 </div>
 
-<div>
+<div class="input-container">
     <label for="size">Size</label>
     <input type="number" name="size" id="size" value="{{ old('size') }}" required>
 </div>
 
-<div>
+<div class="input-container">
     <label for="price">Price</label>
     <input type="number" name="price" id="price" value="{{ old('price') }}" required>
 </div>
 
-<div>
+<div class="input-container">
     <label for="stock">Stock (Optional)</label>
     <input type="number" name="stock" id="stock" value="{{ old('stock') }}">
 </div>
