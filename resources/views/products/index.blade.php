@@ -3,9 +3,9 @@
 
     @foreach ($products as $product)
 
-        <h2>{{ $product->name }}</h2>
-        <p>{{ $product->price }} SEK</p>
-        <p>{{ $product->size }}</p>
+        <h4>{{ $product->modelRing->name }}</h4>
+        {{-- Image here --}}
+        <p>{{ $product->article_number }}</p>
         
     @endforeach
 
