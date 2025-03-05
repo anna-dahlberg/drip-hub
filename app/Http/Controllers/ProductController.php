@@ -12,7 +12,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::with(['type', 'material', 'model'])->get();
+        $products = Product::with(['ringType', 'material', 'modelRing'])->get();
         return view('products.index', compact('products'));
     }
 

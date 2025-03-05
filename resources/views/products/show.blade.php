@@ -6,7 +6,7 @@
 
     <p>{{ $product->size }}</p>
 
-    <p>{{ $product->ring_type }}</p>
+    <p>{{ $product->ringType }}</p>
 
     <p>{{ $product->price }}</p>
     
