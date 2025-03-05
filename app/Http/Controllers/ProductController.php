@@ -60,4 +60,15 @@ class ProductController extends Controller
     {
         //
     }
+
+    public function getStock($article_number, $size)
+    {
+        $product = Product::where('article_number', $article_number)
+            ->where('size', $size)
+            ->first();
+
+        return response()->json([
+            'stock' => $product ? $product->stock : 0
+        ]);
+    }
 }
