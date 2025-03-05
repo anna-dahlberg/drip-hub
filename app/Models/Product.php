@@ -35,4 +35,9 @@ class Product extends Model
     {
         return $this->belongsTo(ModelRing::class, 'model_id');
     }
+
+    public function getRouteKeyName()
+    {
+        return 'article_number';
+    }
 }
