@@ -18,10 +18,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    border: outset rgba(0, 0, 0, 0.1);
-    border-width: 0 4px 4px 0;
     text-decoration: none;
     color: black;
+    transition: all 150ms ease-in-out;
+}
+
+.product-card:hover {
+    transform: scale(1.01);
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 .product-img {
