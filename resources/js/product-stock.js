@@ -4,9 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (sizeSelector) {
         sizeSelector.addEventListener('change', function() {
             const size = this.value;
-            const articleNumber = sizeSelector.dataset.articleNumber;
+            const articleNumber = document.getElementById('article-number');
+            const articleNumberValue = articleNumber.getAttribute('data-article');
+            console.log(articleNumberValue);
             
-            fetch(`/products/${articleNumber}/stock/${size}`)
+            fetch(`/products/${articleNumberValue}/stock/${size}`)
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('stock-display').textContent = data.stock;

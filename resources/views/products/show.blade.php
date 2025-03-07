@@ -4,7 +4,7 @@
     <h2>{{ $product->ModelRing->name }}</h2>
 
     <p class="product-title">Article number</p>
-    <p>{{ $product->article_number }}</p>
+    <p id="article-number" data-article="{{ $product->article_number }}">{{ $product->article_number }}</p>
 
     <p class="product-title">Ring type</p>
     <p>{{ $product->ringType->type }}</p>
@@ -29,18 +29,5 @@
 
         <button>Delete product</button>
     </form>
-
-    <script>
-        document.getElementById('product-size').addEventListener('change', function() {
-            const size = this.value;
-            const articleNumber = '{{ $product->article_number }}';
-
-            fetch(`/products/${articleNumber}/stock/${size}`)
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('stock-display').textContent = data.stock;
-                })
-                .catch(error => console.error('Error fetching stock information:', error));
-        });
-    </script>
+    @vite('resources/js/product-stock.js')
 </x-layout>
