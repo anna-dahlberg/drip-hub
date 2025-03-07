@@ -11,10 +11,29 @@ use App\Http\Requests\SaveProductRequest;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::with(['ringType', 'material', 'modelRing'])->get();
-        return view('products.index', compact('products'));
+        // Start with a base query
+        $query = Product::query();
+
+        // Apply material filter if selected
+        if ($request->filled('material')) {
+            $query->where('material_id', $request->material);
+        }
+
+        // Apply ring type filter if selected
+        if ($request->filled('ring_type')) {
+            $query->where('type_id', $request->ring_type);
+        }
+
+        // Get the filtered products
+        $products = $query->get();
+
+        // Get all materials and ring types for the filter dropdowns
+        $materials = Material::all();
+        $ringTypes = RingType::all();
+
+        return view('products.index', compact('products', 'materials', 'ringTypes'));
     }
 
 
