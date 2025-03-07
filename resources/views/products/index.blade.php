@@ -26,6 +26,7 @@
             </div>
 
             <button type="submit" class="filter-button">Apply Filters</button>
+            <button type="button" class="reset-button" onclick="window.location='{{ route('products.index') }}'">Reset Filters</button>
         </form>
     </section>
     <section class="products">
