@@ -16,6 +16,9 @@ Route::post('/products/store', [ProductController::class, 'store'])
 Route::get('/products/{product}', [ProductController::class, 'show'])->middleware(['auth', 'verified'])
     ->name('products.show');
 
+Route::get('/products/{article_number}/stock/{size}', [ProductController::class, 'getStock'])
+    ->name('products.stock');
+
 Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->middleware(['auth', 'verified'])
     ->name('products.edit');
 

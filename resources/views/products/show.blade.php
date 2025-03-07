@@ -14,12 +14,13 @@
 
     <p class="product-title">Size</p>
     <select name="size" id="product-size">
+        <option value="null">Pick a size</option>
         <?php for ($i = 14; $i <= 23; $i++): ?>
             <option value="<?= $i; ?>"><?= $i; ?></option>
         <?php endfor; ?>
     </select>
     <p class="product-title">In stock</p>
-    <p id="stock-display">{{ $product->stock }}</p>
+    <p id="stock-display">Pick a size</p>
 
     <a href="{{ route('products.edit', $product->article_number) }}">Edit product</a>
 
