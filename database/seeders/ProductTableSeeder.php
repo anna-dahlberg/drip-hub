@@ -476,7 +476,7 @@ class ProductTableSeeder extends Seeder
 
         /* Alexander gold */
         Product::factory()->create([
-            'article_number' => 87654321,
+            'article_number' => 63052841,
             'type_id' => 5,
             'material_id' => 1,
             'model_id' => 6,
