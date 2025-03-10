@@ -19,5 +19,21 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        $this->call([
+            MaterialTableSeeder::class,
+        ]);
+
+        $this->call([
+            RingTypeTableSeeder::class,
+        ]);
+
+        $this->call([
+            ModelsTableSeeder::class,
+        ]);
+
+        $this->call([
+            ProductTableSeeder::class,
+        ]);
     }
 }

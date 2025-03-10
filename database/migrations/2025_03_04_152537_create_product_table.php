@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('product', function (Blueprint $table) {
             $table->id();
-            $table->integer('article_number')->unique();
+            $table->integer('article_number');
             $table->foreignId('type_id')->constrained('ring_type')->onDelete('cascade');
             $table->foreignId('material_id')->constrained('material')->onDelete('cascade');
             $table->foreignId('model_id')->constrained('models')->onDelete('cascade');
