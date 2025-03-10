@@ -1,6 +1,9 @@
 <x-layout>
+    @php
+    $imagePath = 'images/' . $product->ModelRing->name . '-' . $product->article_number . '-' . $product->Material->id . '.jpeg';
+    @endphp
     <h1>Product information</h1>
-    <img src="https://vanbruun.com/__media-service/img/product/1218/jacob-30x17-yg_hover.jpg" alt="Image of ring model xxxxxx">
+    <img src="{{ asset($imagePath) }}" alt="Image of ring model {{ $product->ModelRing->name }}">
     <h2>{{ $product->ModelRing->name }}</h2>
 
     <p class="product-title">Article number</p>
@@ -8,6 +11,9 @@
 
     <p class="product-title">Ring type</p>
     <p>{{ $product->ringType->type }}</p>
+
+    <p class="product-title">Material</p>
+    <p>{{ $product->Material->material_id }}</p>
 
     <p class="product-title">Price</p>
     <p>{{ $product->price }}:-</p>
