@@ -15,11 +15,19 @@
                 <h1>Welcome</h1>
                 <h3>{{ auth()->user()->name }}!</h3>
             </header>
-            <ul class="options">
-                <li class="nav-link"><a href="{{ route('home') }}">Home</a></li>
-                <li class="nav-link"><a href="{{ route('products.index') }}">Show Products</a></li>
-                <li class="nav-link"><a href="{{ route('products.create') }}">Add Product</a></li>
-            </ul>
+            <div class="options">
+                <ul class="options">
+                    <li class="nav-link"><a href="{{ route('home') }}">Home</a></li>
+                    <li class="nav-link"><a href="{{ route('products.index') }}">Show Products</a></li>
+                    <li class="nav-link"><a href="{{ route('products.create') }}">Add Product</a></li>
+                </ul>
+                @if (auth()->user()->hasRole('admin'))
+                <ul class="options">
+                    <li class="nav-link"><a href="{{ route('users.index') }}">Show Users</a></li>
+                    <li class="nav-link"><a href="{{ route('users.create') }}">Add User</a></li>
+                </ul>
+                @endif
+            </div>
             <a href="{{ route('logout') }}" class="sign-out"><small>Sign Out</small></a>
         </nav>
         <section class="dashboard">
