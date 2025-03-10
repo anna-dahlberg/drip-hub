@@ -29,4 +29,8 @@ class ProductControllerTest extends TestCase
         $response->assertViewIs('products.create');
         $response->assertViewHasAll(['types', 'materials', 'models']);
     }
+
+    public function test_edit_product() {}
+
+    public function test_destroy_product() {}
 }
