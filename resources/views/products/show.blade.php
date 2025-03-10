@@ -1,9 +1,6 @@
 <x-layout>
-    @php
-    $imagePath = 'images/' . $product->ModelRing->name . '-' . $product->article_number . '-' . $product->Material->id . '.jpeg';
-    @endphp
     <h1>Product information</h1>
-    <img src="{{ asset($imagePath) }}" alt="Image of ring model {{ $product->ModelRing->name }}">
+    <img src="{{ asset('images/' . $product->image_path) }}" alt="Image of ring model {{ $product->ModelRing->name }}">
     <h2>{{ $product->ModelRing->name }}</h2>
 
     <p class="product-title">Article number</p>

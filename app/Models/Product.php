@@ -40,4 +40,11 @@ class Product extends Model
     {
         return 'article_number';
     }
+
+    public function getImagePathAttribute()
+    {
+        return $this->ModelRing->name . '-' .
+            $this->article_number . '-' .
+            $this->Material->id . '.jpeg';
+    }
 }
