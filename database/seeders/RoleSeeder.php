@@ -20,7 +20,7 @@ class RoleSeeder extends Seeder
 
         $user = User::factory()->create([
             //change to desired details
-            'name' => 'rune',
+            'name' => 'Rune',
             'email' => 'rune@yrgo.se',
             'password' => Hash::make('12345678'),
             'role_id' => $adminRole->id,
