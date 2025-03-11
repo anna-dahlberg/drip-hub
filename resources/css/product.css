@@ -1,9 +1,11 @@
 .filter-form {
-    width: 80%;
+    width: 60%;
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin: 1rem;
+    padding: 1rem;
+    background-color: var(--almost-white);
 }
 
 fieldset {
@@ -25,7 +27,7 @@ fieldset {
 }
 
 .product-card {
-    background-color: lightgrey;
+    background-color: var(--almost-white);
     width: 15%;
     max-height: 45%;
     display: flex;
@@ -35,7 +37,7 @@ fieldset {
     align-items: center;
     padding: 1rem;
     text-decoration: none;
-    color: black;
+    color: var(--black);
     transition: all 150ms ease-in-out;
 }
 

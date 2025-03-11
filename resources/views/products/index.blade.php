@@ -34,6 +34,6 @@
         </a>
         @endforeach
 
-        {{ $products->links() }}
     </section>
+    {{ $products->links() }}
 </x-layout>
