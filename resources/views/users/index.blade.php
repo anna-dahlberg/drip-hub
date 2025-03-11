@@ -1,5 +1,5 @@
 <x-layout>
-    <section class="users">
+    <section class="users" aria-label="Displays Users">
         @foreach ($users as $user)
         <a href="{{ route('users.edit',  $user->id) }}" class="user-card">
             <h3>{{ $user->name }}</h3>
