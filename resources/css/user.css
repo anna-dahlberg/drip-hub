@@ -50,9 +50,16 @@
     gap: 0.5rem;
 }
 
+.user-edit-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .user-form-button {
-    height: 4%;
-    width: 5%;
+    padding: 0.4rem;
     border: none;
     background-color: lightgrey;
     transition: all 150ms ease-in-out;
@@ -65,14 +72,13 @@
     box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
 }
 
-.user-delete-button:active {
+.user-form-button:active {
     transform: translateY(0.1rem);
     box-shadow: none;
 }
 
 .user-delete-button {
-    height: 4%;
-    width: 5%;
+    padding: 0.4rem;
     border: none;
     background-color: lightgrey;
     transition: all 150ms ease-in-out;
@@ -88,4 +94,14 @@
 .user-delete-button:active {
     transform: translateY(0.1rem);
     box-shadow: none;
+}
+
+.user-edit-form-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
 }

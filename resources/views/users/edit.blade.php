@@ -1,5 +1,6 @@
 <x-layout>
-<form method="POST" class="user-form" action="{{ route('users.update', $user)}}">
+<div class="user-edit-form-container">
+<form method="POST" class="user-edit-form" action="{{ route('users.update', $user)}}">
     @method('PATCH')
     <x-users.form :user="$user" :roles="$roles" :addPassword="false"></x-users.form>
 </form>
@@ -9,4 +10,5 @@
     @csrf
     <button type="submit" class="user-delete-button">Delete</button>
 </form>
+</div>
 </x-layout>
