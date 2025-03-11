@@ -27,7 +27,7 @@
             <p class="product-title">In stock</p>
             <p id="stock-display">Pick a size</p>
 
-            <a href="{{ route('products.edit', $product->article_number) }}">Edit product</a>
+            <button type="button" class="edit-button" onclick="window.location='{{ route('products.edit', $product->article_number) }}'">Edit product</button>
 
             <form method="post" action="{{ route('products.destroy', $product) }}">
                 @csrf
