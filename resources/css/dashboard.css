@@ -13,3 +13,7 @@
 .content {
     background-color: var(--primary-light);
 }
+
+.welcome-img {
+    margin: 1.5rem;
+}

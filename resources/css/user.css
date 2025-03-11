@@ -10,7 +10,7 @@
 }
 
 .user-card {
-    background-color: lightgrey;
+    background-color: var(--almost-white);
     width: 25%;
     height: 30%;
     display: flex;
@@ -20,7 +20,7 @@
     align-items: center;
     padding: 1rem;
     text-decoration: none;
-    color: black;
+    color: var(--black);
     transition: all 150ms ease-in-out;
 }
 
@@ -68,14 +68,14 @@
 .user-form-button {
     padding: 0.5rem;
     border: none;
-    background-color: lightgrey;
+    background-color: var(--primary-dark);;
     transition: all 150ms ease-in-out;
     margin-top: 0.5rem;
 }
 
 .user-form-button:hover {
     transform: scale(1.03);
-    background-color: rgb(100, 240, 80);
+    background-color: var(--sucess);
     box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
@@ -88,14 +88,14 @@
 .user-delete-button {
     padding: 0.5rem;
     border: none;
-    background-color: lightgrey;
+    background-color: var(--primary-dark);
     transition: all 150ms ease-in-out;
     margin-top: 0.5rem;
 }
 
 .user-delete-button:hover {
     transform: scale(1.03);
-    background-color: rgb(245, 55, 55);
+    background-color: var(--danger);
     box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
