@@ -37,5 +37,7 @@
             <p>{{ $product->article_number }}</p>
         </a>
         @endforeach
+
+        {{ $products->links() }}
     </section>
 </x-layout>

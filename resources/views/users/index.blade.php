@@ -4,7 +4,7 @@
         <a href="{{ route('users.edit',  $user->id) }}" class="product-card">
             <h4>{{ $user->name }}</h4>
             <p>{{ $user->email }}</p>
-            <p>{{ $user->role->name }}</p>
+            <p>{{ $user->role }}</p>
         </a>
         @endforeach
     </section>

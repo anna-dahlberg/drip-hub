@@ -13,23 +13,18 @@ class ProductController extends Controller
 {
     public function index(Request $request)
     {
-        // Start with a base query
         $query = Product::query();
 
-        // Apply material filter if selected
         if ($request->filled('material')) {
             $query->where('material_id', $request->material);
         }
 
-        // Apply ring type filter if selected
         if ($request->filled('ring_type')) {
             $query->where('type_id', $request->ring_type);
         }
 
-        // Get the filtered products
-        $products = $query->get();
+        $products = $query->simplePaginate(12);
 
-        // Get all materials and ring types for the filter dropdowns
         $materials = Material::all();
         $ringTypes = RingType::all();
 
