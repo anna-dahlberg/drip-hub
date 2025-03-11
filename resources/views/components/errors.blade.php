@@ -1,7 +1,10 @@
 @if($errors->any())
-    <div class="error-container">
-        @foreach($errors->all() as $error)
-            <p class="error">{{ $error }}</p>
-        @endforeach
-    </div>
+    <section class="error-container" role="alert" aria-live="assertive">
+        <h6>Errors found:</h6>
+        <ul>
+            @foreach($errors->all() as $error)
+                <li class="error">{{ $error }}</li>
+            @endforeach
+        </ul>
+    </section>
 @endif
