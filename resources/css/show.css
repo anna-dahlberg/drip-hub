@@ -1,0 +1,6 @@
+img {
+    width: 50%;
+    height: auto; /* Limit how tall the image can get */
+    height: auto;
+    object-fit: contain;
+  }
