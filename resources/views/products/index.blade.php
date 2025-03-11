@@ -33,7 +33,7 @@
         @foreach ($products as $product)
         <a href="{{ route('products.show',  $product->article_number) }}" class="product-card">
             <h4>{{ $product->modelRing->name }}</h4>
-            <img class="product-img">
+            <img src="{{ asset('images/' . $product->image_path) }}" alt="Image of ring model {{ $product->ModelRing->name }}">
             <p>{{ $product->article_number }}</p>
         </a>
         @endforeach
