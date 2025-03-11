@@ -1,6 +1,22 @@
-img {
-    width: 50%;
-    height: auto; /* Limit how tall the image can get */
+.product-info-title {
+    margin: 1rem;
+}
+
+#product-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.product-description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.product-img {
+    width: 40%;
     height: auto;
     object-fit: contain;
   }

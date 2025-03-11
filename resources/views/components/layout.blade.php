@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @vite(['resources/css/nav.css', 'resources/css/global.css', 'resources/css/dashboard.css', 'resources/css/product.css', 'resources/css/form.css', 'resources/css/user.css'])
+    @vite(['resources/css/nav.css', 'resources/css/global.css', 'resources/css/dashboard.css', 'resources/css/product.css', 'resources/css/form.css', 'resources/css/user.css', 'resources/css/show.css'])
     <title>Drip Hub</title>
 </head>
+
 <body>
     <main class="content">
         <nav class="nav-bar">
@@ -35,4 +37,5 @@
         </section>
     </main>
 </body>
+
 </html>
