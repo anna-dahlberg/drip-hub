@@ -40,3 +40,8 @@ button:active {
     padding: 0.31rem 0.56rem;
     transition: all 50ms ease-in-out;
 }
+
+input {
+    border: none;
+    padding: 0.31rem 0.56rem;
+}
