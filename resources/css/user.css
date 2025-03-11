@@ -1,0 +1,91 @@
+.users {
+    margin-top: 3rem;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.user-card {
+    background-color: lightgrey;
+    width: 25%;
+    height: 30%;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+    transition: all 150ms ease-in-out;
+}
+
+.user-card:hover {
+    transform: scale(1.01);
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.user-card p {
+    font-size: 1rem;
+    font-weight: 500;
+    
+}
+
+.user-card small {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.user-form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.user-form-button {
+    height: 4%;
+    width: 5%;
+    border: none;
+    background-color: lightgrey;
+    transition: all 150ms ease-in-out;
+    margin-top: 0.5rem;
+}
+
+.user-form-button:hover {
+    transform: scale(1.03);
+    background-color: rgb(100, 240, 80);
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.user-delete-button:active {
+    transform: translateY(0.1rem);
+    box-shadow: none;
+}
+
+.user-delete-button {
+    height: 4%;
+    width: 5%;
+    border: none;
+    background-color: lightgrey;
+    transition: all 150ms ease-in-out;
+    margin-top: 0.5rem;
+}
+
+.user-delete-button:hover {
+    transform: scale(1.03);
+    background-color: rgb(245, 55, 55);
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.user-delete-button:active {
+    transform: translateY(0.1rem);
+    box-shadow: none;
+}

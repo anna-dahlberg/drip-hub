@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @vite(['resources/css/nav.css', 'resources/css/global.css', 'resources/css/dashboard.css', 'resources/css/product.css', 'resources/css/form.css'])
+    @vite(['resources/css/nav.css', 'resources/css/global.css', 'resources/css/dashboard.css', 'resources/css/product.css', 'resources/css/form.css', 'resources/css/user.css'])
     <title>Drip Hub</title>
 </head>
 <body>
