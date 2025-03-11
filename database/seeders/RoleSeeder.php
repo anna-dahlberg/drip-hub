@@ -19,7 +19,7 @@ class RoleSeeder extends Seeder
         $employeeRole = Role::firstOrCreate(['name' => 'employee']);
 
         $user = User::factory()->create([
-            //change to desired data
+            //change to desired details
             'name' => 'rune',
             'email' => 'rune@yrgo.se',
             'password' => Hash::make('12345678'),
