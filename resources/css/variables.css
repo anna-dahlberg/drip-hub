@@ -1,8 +1,9 @@
 :root {
     --primary-dark: #251F1C;
     --primary-light: #E0DBD6;
-    --almost-white: #F0EBE6;
+    --almost-white: #eeeae6;
     --white: #ffffff; 
     --black: #000000;
+    --inactive-black: #706E6B;
     --font-family: "Poppins", sans-serif;
 }

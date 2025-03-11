@@ -22,8 +22,8 @@
                 @endforeach
             </select>
         </fieldset>
-        <button type="submit" class="filter-button">Apply Filters</button>
-        <button type="button" class="reset-button" onclick="window.location='{{ route('products.index') }}'">Reset Filters</button>
+        <button type="submit" class="filter-button">Apply Filter</button>
+        <button type="button" class="reset-button" onclick="window.location='{{ route('products.index') }}'">Reset Filter</button>
     </form>
     <section class="products">
         @foreach ($products as $product)
@@ -35,5 +35,7 @@
         @endforeach
 
     </section>
+    <!-- <section id="pages"> -->
     {{ $products->links() }}
+    <!-- </section> -->
 </x-layout>
