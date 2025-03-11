@@ -9,20 +9,20 @@
 </head>
 <body>
     <main class="content">
-        <nav class="admin-nav">
+        <nav class="nav-bar">
             <header>
                 <small>Drip Hub</small>
                 <h1>Welcome</h1>
                 <h3>{{ auth()->user()->name }}!</h3>
             </header>
-            <div class="options">
-                <ul class="options">
-                    <li class="nav-link"><a href="{{ route('home') }}">Home</a></li>
+            <div class="nav-link-container">
+                <li class="nav-link"><a href="{{ route('home') }}">Home</a></li>
+                <ul aria-label="product-links">
                     <li class="nav-link"><a href="{{ route('products.index') }}">Show Products</a></li>
                     <li class="nav-link"><a href="{{ route('products.create') }}">Add Product</a></li>
                 </ul>
                 @if (auth()->user()->hasRole('admin'))
-                <ul class="options">
+                <ul aria-label="user-links">
                     <li class="nav-link"><a href="{{ route('users.index') }}">Show Users</a></li>
                     <li class="nav-link"><a href="{{ route('users.create') }}">Add User</a></li>
                 </ul>
