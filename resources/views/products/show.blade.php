@@ -1,31 +1,31 @@
 <x-layout>
     <h1 class="product-info-title">Product information</h1>
-    <section id="product-info">
+    <section id="product-display">
         <img src="{{ asset('images/' . $product->image_path) }}" alt="Image of ring model {{ $product->ModelRing->name }}" class="product-img">
         <dl class="product-description">
             <h2>{{ $product->ModelRing->name }}</h2>
 
-            <p class="product-title">Article number</p>
-            <p id="article-number" data-article="{{ $product->article_number }}">{{ $product->article_number }}</p>
+            <dt class="product-title">Article number</dt>
+            <dd class="product-info" id="article-number" data-article="{{ $product->article_number }}">{{ $product->article_number }}</dd>
 
-            <p class="product-title">Ring type</p>
-            <p>{{ $product->ringType->type }}</p>
+            <dt class="product-title">Ring type</dt>
+            <dd class="product-info">{{ $product->ringType->type }}</dd>
 
-            <p class="product-title">Material</p>
-            <p>{{ $product->Material->material_id }}</p>
+            <dt class="product-title">Material</dt>
+            <dd class="product-info">{{ $product->Material->material }}</dd>
 
-            <p class="product-title">Price</p>
-            <p>{{ $product->price }}:-</p>
+            <dt class="product-title">Price</dt>
+            <dd class="product-info">{{ $product->price }}:-</dd>
 
-            <p class="product-title">Size</p>
+            <dt class="product-title">Size</dt>
             <select name="size" id="product-size">
                 <option value="null">Pick a size</option>
                 <?php for ($i = 14; $i <= 23; $i++): ?>
                     <option value="<?= $i; ?>"><?= $i; ?></option>
                 <?php endfor; ?>
             </select>
-            <p class="product-title">In stock</p>
-            <p id="stock-display">Pick a size</p>
+            <dt class="product-title">In stock</dt>
+            <dd class="product-info" id="stock-display">Pick a size</dd>
 
             <button type="button" class="edit-button" onclick="window.location='{{ route('products.edit', $product->article_number) }}'">Edit product</button>
 
