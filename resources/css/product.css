@@ -4,16 +4,16 @@
     display: flex;
     justify-content: start;
     align-items: start;
-    gap: 2rem;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 
 .product-card {
     background-color: lightgrey;
-    width: 30%;
-    height: 60%;
-    margin-top: 1rem;
+    width: 15%;
+    max-height: 45%;
     display: flex;
+    gap: 0.5rem;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
