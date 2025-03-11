@@ -1,10 +1,10 @@
 <x-layout>
-    <section class="products">
+    <section class="users">
         @foreach ($users as $user)
-        <a href="{{ route('users.edit',  $user->id) }}" class="product-card">
-            <h4>{{ $user->name }}</h4>
+        <a href="{{ route('users.edit',  $user->id) }}" class="user-card">
+            <h3>{{ $user->name }}</h3>
             <p>{{ $user->email }}</p>
-            <p>{{ $user->role->name }}</p>
+            <small>{{ $user->role->name }}</small>
         </a>
         @endforeach
     </section>
