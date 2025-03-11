@@ -23,7 +23,7 @@ class ProductController extends Controller
             $query->where('type_id', $request->ring_type);
         }
 
-        $products = $query->simplePaginate(12);
+        $products = $query->simplePaginate(12)->withQueryString();
 
         $materials = Material::all();
         $ringTypes = RingType::all();
