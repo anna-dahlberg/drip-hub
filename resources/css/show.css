@@ -38,6 +38,13 @@
     background-color: var(--danger);
 }
 
+.delete-btn:active {
+    padding: 0.31rem 1.76rem;
+    background-color: var(--white);
+    color: var(--danger);
+    transition: all 150ms ease-in-out;
+}
+
 .product-img {
     max-width: 450px;
     width: 100%;

@@ -23,10 +23,9 @@
 <select name="role_id" id="role_id" class="user-form-input" required>
     <option value="">Select User Role</option>
     @foreach($roles as $role)
-        <option value="{{ $role->id }}" {{ optional($user)->role_id == $role->id ? 'selected' : '' }}>{{ $role->name }}</option>
+    <option value="{{ $role->id }}" {{ optional($user)->role_id == $role->id ? 'selected' : '' }}>{{ $role->name }}</option>
     @endforeach
 </select>
 
 
 <button type="submit" class="user-form-button">Save!</button>
-
