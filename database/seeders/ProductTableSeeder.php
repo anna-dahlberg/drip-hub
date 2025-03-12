@@ -1117,5 +1117,188 @@ class ProductTableSeeder extends Seeder
             'price' => 8200,
             'stock' => 145,
         ]);
+        /* Jean rose gold */
+        Product::factory()->create([
+            'article_number' => 33562047,
+            'type_id' => 6,
+            'material_id' => 3,
+            'model_id' => 4,
+            'size' => 14,
+            'price' => 7700,
+            'stock' => 67,
+        ]);
+        Product::factory()->create([
+            'article_number' => 33562047,
+            'type_id' => 6,
+            'material_id' => 3,
+            'model_id' => 4,
+            'size' => 15,
+            'price' => 7700,
+            'stock' => 113,
+        ]);
+        Product::factory()->create([
+            'article_number' => 33562047,
+            'type_id' => 6,
+            'material_id' => 3,
+            'model_id' => 4,
+            'size' => 16,
+            'price' => 7700,
+            'stock' => 57,
+        ]);
+        Product::factory()->create([
+            'article_number' => 33562047,
+            'type_id' => 6,
+            'material_id' => 3,
+            'model_id' => 4,
+            'size' => 17,
+            'price' => 7700,
+            'stock' => 146,
+        ]);
+        Product::factory()->create([
+            'article_number' => 33562047,
+            'type_id' => 6,
+            'material_id' => 3,
+            'model_id' => 4,
+            'size' => 18,
+            'price' => 7700,
+            'stock' => 127,
+        ]);
+        Product::factory()->create([
+            'article_number' => 33562047,
+            'type_id' => 6,
+            'material_id' => 3,
+            'model_id' => 4,
+            'size' => 19,
+            'price' => 7700,
+            'stock' => 67,
+        ]);
+        Product::factory()->create([
+            'article_number' => 33562047,
+            'type_id' => 6,
+            'material_id' => 3,
+            'model_id' => 4,
+            'size' => 20,
+            'price' => 7700,
+            'stock' => 134,
+        ]);
+        Product::factory()->create([
+            'article_number' => 33562047,
+            'type_id' => 6,
+            'material_id' => 3,
+            'model_id' => 4,
+            'size' => 21,
+            'price' => 7700,
+            'stock' => 143,
+        ]);
+        Product::factory()->create([
+            'article_number' => 33562047,
+            'type_id' => 6,
+            'material_id' => 3,
+            'model_id' => 4,
+            'size' => 22,
+            'price' => 7700,
+            'stock' => 58,
+        ]);
+        Product::factory()->create([
+            'article_number' => 33562047,
+            'type_id' => 6,
+            'material_id' => 3,
+            'model_id' => 4,
+            'size' => 23,
+            'price' => 7700,
+            'stock' => 78,
+        ]);
+
+        /* Maria gold */
+        Product::factory()->create([
+            'article_number' => 53910428,
+            'type_id' => 2,
+            'material_id' => 1,
+            'model_id' => 2,
+            'size' => 14,
+            'price' => 8800,
+            'stock' => 90,
+        ]);
+        Product::factory()->create([
+            'article_number' => 53910428,
+            'type_id' => 2,
+            'material_id' => 1,
+            'model_id' => 2,
+            'size' => 15,
+            'price' => 8800,
+            'stock' => 97,
+        ]);
+        Product::factory()->create([
+            'article_number' => 53910428,
+            'type_id' => 2,
+            'material_id' => 1,
+            'model_id' => 2,
+            'size' => 16,
+            'price' => 8800,
+            'stock' => 123,
+        ]);
+        Product::factory()->create([
+            'article_number' => 53910428,
+            'type_id' => 2,
+            'material_id' => 1,
+            'model_id' => 2,
+            'size' => 17,
+            'price' => 8800,
+            'stock' => 134,
+        ]);
+        Product::factory()->create([
+            'article_number' => 53910428,
+            'type_id' => 2,
+            'material_id' => 1,
+            'model_id' => 2,
+            'size' => 18,
+            'price' => 8800,
+            'stock' => 156,
+        ]);
+        Product::factory()->create([
+            'article_number' => 53910428,
+            'type_id' => 2,
+            'material_id' => 1,
+            'model_id' => 2,
+            'size' => 19,
+            'price' => 8800,
+            'stock' => 168,
+        ]);
+        Product::factory()->create([
+            'article_number' => 53910428,
+            'type_id' => 2,
+            'material_id' => 1,
+            'model_id' => 2,
+            'size' => 20,
+            'price' => 8800,
+            'stock' => 169,
+        ]);
+        Product::factory()->create([
+            'article_number' => 53910428,
+            'type_id' => 2,
+            'material_id' => 1,
+            'model_id' => 2,
+            'size' => 21,
+            'price' => 8800,
+            'stock' => 135,
+        ]);
+        Product::factory()->create([
+            'article_number' => 53910428,
+            'type_id' => 2,
+            'material_id' => 1,
+            'model_id' => 2,
+            'size' => 22,
+            'price' => 8800,
+            'stock' => 121,
+        ]);
+        Product::factory()->create([
+            'article_number' => 53910428,
+            'type_id' => 2,
+            'material_id' => 1,
+            'model_id' => 2,
+            'size' => 23,
+            'price' => 8800,
+            'stock' => 143,
+        ]);
     }
 }

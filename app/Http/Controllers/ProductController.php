@@ -13,17 +13,45 @@ class ProductController extends Controller
 {
     public function index(Request $request)
     {
-        $query = Product::query();
+
+        $baseQuery = Product::query();
+
 
         if ($request->filled('material')) {
-            $query->where('material_id', $request->material);
+            $baseQuery->where('material_id', $request->material);
         }
-
         if ($request->filled('ring_type')) {
-            $query->where('type_id', $request->ring_type);
+            $baseQuery->where('type_id', $request->ring_type);
         }
 
-        $products = $query->simplePaginate(12)->withQueryString();
+
+        $uniqueArticleNumbers = (clone $baseQuery)
+            ->select('article_number')
+            ->distinct()
+            ->pluck('article_number');
+
+
+        $productIds = [];
+        foreach ($uniqueArticleNumbers as $articleNumber) {
+            $query = Product::where('article_number', $articleNumber);
+
+            // Reapply filters
+            if ($request->filled('material')) {
+                $query->where('material_id', $request->material);
+            }
+            if ($request->filled('ring_type')) {
+                $query->where('type_id', $request->ring_type);
+            }
+
+            $product = $query->first();
+            if ($product) {
+                $productIds[] = $product->id;
+            }
+        }
+
+        $products = Product::whereIn('id', $productIds)
+            ->simplePaginate(12)
+            ->withQueryString();
 
         $materials = Material::all();
         $ringTypes = RingType::all();

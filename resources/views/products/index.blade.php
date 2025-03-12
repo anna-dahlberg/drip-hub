@@ -26,16 +26,16 @@
         <button type="button" class="reset-button" onclick="window.location='{{ route('products.index') }}'">Reset Filter</button>
     </form>
     <section class="products">
-        @foreach ($products as $product)
-        <a href="{{ route('products.show',  $product->article_number) }}" class="product-card">
+        @foreach ($products->groupBy('article_number') as $articleNumber => $articleProducts)
+        @php
+        $product = $articleProducts->first();
+        @endphp
+        <a href="{{ route('products.show', $articleNumber) }}" class="product-card">
             <h4>{{ $product->modelRing->name }}</h4>
             <img src="{{ asset('images/' . $product->image_path) }}" alt="Image of ring model {{ $product->ModelRing->name }}">
-            <p>{{ $product->article_number }}</p>
+            <p>{{ $articleNumber }}</p>
         </a>
         @endforeach
-
     </section>
-    <!-- <section id="pages"> -->
     {{ $products->links() }}
-    <!-- </section> -->
 </x-layout>
