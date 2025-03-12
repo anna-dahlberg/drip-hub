@@ -16,7 +16,6 @@ class ProductController extends Controller
 
         $baseQuery = Product::query();
 
-
         if ($request->filled('material')) {
             $baseQuery->where('material_id', $request->material);
         }
