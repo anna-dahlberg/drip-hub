@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @vite(['resources/css/nav.css', 'resources/css/global.css', 'resources/css/dashboard.css', 'resources/css/product.css', 'resources/css/form.css', 'resources/css/user.css', 'resources/css/show.css', 'resources/css/variables.css'])
+    <title>Drip Hub</title>
+</head>
+
+<body>
+    <main class="content">
+        <nav class="nav-bar">
+            <header>
+                <small>Drip Hub</small>
+                <h1>Welcome</h1>
+                <h3>{{ auth()->user()->name }}!</h3>
+            </header>
+            <div class="nav-link-container">
+                <li class="nav-link"><a href="{{ route('home') }}">Home</a></li>
+                <ul aria-label="product-links">
+                    <li class="nav-link"><a href="{{ route('products.index') }}">Show Products</a></li>
+                    <li class="nav-link"><a href="{{ route('products.create') }}">Add Product</a></li>
+                </ul>
+                @if (auth()->user()->hasRole('admin'))
+                <ul aria-label="user-links">
+                    <li class="nav-link"><a href="{{ route('users.index') }}">Show Users</a></li>
+                    <li class="nav-link"><a href="{{ route('users.create') }}">Add User</a></li>
+                </ul>
+                @endif
+            </div>
+            <a href="{{ route('logout') }}" class="sign-out"><small>Sign Out</small></a>
+        </nav>
+        <section class="dashboard">
+            {{ $slot }}
+        </section>
+    </main>
+</body>
+
+</html>

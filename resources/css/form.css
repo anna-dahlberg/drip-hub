@@ -1,0 +1,51 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#article_number {
+    width: 11.875rem;
+    font-size: 1.125rem;
+}
+
+#type_id {
+    width: 11.875rem;
+    font-size: 1.125rem;
+}
+
+#material_id {
+    width: 11.875rem;
+    font-size: 1.125rem;
+}
+
+#model_id {
+    width: 11.875rem;
+    font-size: 1.125rem;
+}
+
+#size {
+    width: 11.875rem;
+    font-size: 1.125rem;
+}
+
+#price {
+    width: 11.875rem;
+    font-size: 1.125rem;
+}
+
+#stock {
+    width: 11.875rem;
+    font-size: 1.125rem;
+}

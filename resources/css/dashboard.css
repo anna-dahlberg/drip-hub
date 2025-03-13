@@ -1,0 +1,19 @@
+.dashboard {
+    height: 90vh;
+    width: 90vw;
+    background-color: var(--primary-light);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.content {
+    background-color: var(--primary-light);
+}
+
+.welcome-img {
+    margin: 1.5rem;
+}

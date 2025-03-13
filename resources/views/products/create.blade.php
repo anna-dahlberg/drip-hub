@@ -1,0 +1,12 @@
+<x-layout>
+    <h1>New Product</h1>
+
+    <x-errors />
+
+    <form method="POST" action="{{ route('products.store') }}" class="form-container">
+       
+        <x-products.form :types="$types" :materials="$materials" :models="$models" />
+
+    </form>
+    
+</x-layout>
